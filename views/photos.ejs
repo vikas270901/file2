@@ -1,0 +1,21 @@
+<%=data.length%><br>
+<img src="./uploads/2.png">
+<%for(var i=data.length-2;i>=26;i--){%>
+<%=data[i].image%><br>
+./uploads/<%=data[i].image%>
+<br><br><br><br>
+<%}%>
+<%=data%><br>
+
+<h3>Results...</h3>
+<a href="/" > Contribute Here </a><br>
+<a href="/files" > View All Files </a><br>
+<%=data.length%> Results Found...<br>
+<%var count=0;%>
+<%for(var i=0;i<data.length;i++){if(count>50){break;}%>
+File:<%=data[i].name%>, <%=data[i].sem%> SEM <br>
+Filename: <%=data[i].file%><br>
+<b><a href="/download/<%=data[i].file%>">Download file</a></b><br>
+File Description: <%=data[i].description%><br>
+Likes: <%=data[i].likes%><br>
+<%count++;}%><br>

@@ -1,0 +1,20 @@
+<%include partials/header%>
+<div class="ui container" style="width:60%;padding:20px;background:white;">
+<h3>Results...</h3>
+<a href="/" class="ui basic button" > Contribute Here </a> 
+<a href="/files" class="ui basic button" > View All Files </a>
+<br><br><b>Result: Total <%=data.length%> Results Found...</b><br>
+<hr>
+<br><%var count=0;%>
+<%for(var i=0;i<data.length;i++){if(count>50){break;}%>
+File:<%=data[i].name%>, <%=data[i].sem%> SEM <br>
+Author:<%=data[i].author%><br>
+Filename: <%=data[i].file%><br>
+<b><a href="/read/<%=data[i].file%>">Open file</a></b>
+/ <b><a href="/download/<%=data[i].file%>">Download file</a></b><br>
+<b><a href="/delete/<%=data[i].file%>">Delete file</a></b><br>
+File Description: <%=data[i].description%><br>
+Likes: <%=data[i].likes%><br>
+<br><hr>
+<br><%count++;}%><br>
+<%include partials/footer%>

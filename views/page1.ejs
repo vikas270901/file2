@@ -1,0 +1,79 @@
+<%include partials/header%>
+<div class="ui container" style="padding:20px;background:white;">
+<h1> Hello, You have reached to your page.</h1>
+<div class="ui placeholder segment">
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <div class="ui form">
+        <h3>Search File here : </h3>
+<h5>Search by branch and semester: </h5>
+<form action="/search" method="POST">
+Select Subject : <select name="name" required>
+    <option value="others">OTHERS</option>
+    <option value="cse">CSE</option>
+    <option value="mech">MECH</option>
+    <option value="ece">ECE</option>
+    <option value="hss">HSS</option>
+    <option value="physics">PHYSICS</option>
+    <option value="maths">MATHS</option>
+    <option value="notice">NOTICE</option>
+</select><br>
+Select Required Semester : <select name="sem" required>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+</select><br>
+<input class="ui basic button" type="submit">
+</form>
+<br>
+<hr/><center><b>OR</b></center><hr/><br>
+<form action="/searchtext" method="POST">
+Search By Filename : 
+<input type="text" name="avatar"><br><br>
+<input class="ui basic button" type="submit">
+</form>
+      </div>
+    </div>
+    <div class="middle aligned column">
+     <div class="ui form">
+    <h3>Upload File here : </h3>
+<b>Note: Windows Files (.docx, .odp, .odt, etc.) will not be opened in browser as browser don't support, instead will be downloaded to your system. </b>
+<form action="/upload" enctype="multipart/form-data" method="POST">
+<input type="text" name="author" placeholder="Author" value="NA">
+<input type="text" name="desc" placeholder="File Description" required>
+<input type="file" name="avatar"><br><br>
+Select Subject : <select name="name" required>
+    <option value="others">OTHERS</option>
+    <option value="cse">CSE</option>
+    <option value="mech">MECH</option>
+    <option value="ece">ECE</option>
+    <option value="hss">HSS</option>
+    <option value="physics">PHYSICS</option>
+    <option value="maths">MATHS</option>
+    <option value="notice">NOTICE</option>
+</select><br><br>
+Select Sem : <select name="sem" required>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+</select><br><br>
+<input class="ui basic button" type="submit">
+</form>
+	</div>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
+</div>
+<%include partials/footer%>
