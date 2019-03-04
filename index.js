@@ -60,7 +60,7 @@ app.get("/thefile/:id", function(req, res){
 
 app.post("/search", function(req, res){//console.log(req.body.name+req.body.sem);
 	model.find({'name':req.body.name, 'sem':req.body.sem}, function(err, resl){
-		console.log(resl);
+		//console.log(resl);
 		res.render("searchresult", {data:resl});
 	});
 });
@@ -75,7 +75,7 @@ app.post("/searchtext", function(req, res){	//console.log(req.body.avatar);
 app.get("/files", function(req, res){
 	model.find({}, function(err, resl){
 	if(err){console.log(err);}
-		else{console.log(res.file);
+		else{//console.log(res.file);
 			res.render("searchresult", {data:resl});}	
 	});
 });
